@@ -27,12 +27,32 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    /* text-align: center; */
+    text-align: center;
     color: #fff;
     display: block;
     padding: 10px;
+    background-color: #777;
 }
 
 nav a:hover {
     background-color: #555;
+}
+
+/* flex styles */
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        /* justify-content: center; */
+        /* justify-content: flex-end; */
+        justify-content: flex-start;
+        /* justify-content: space-around; */
+        /* justify-content: space-between; */
+        /* justify-content: space-evenly; */
+
+    }
+
+    nav li {
+        flex: 1 1 0;
+    }
 }
