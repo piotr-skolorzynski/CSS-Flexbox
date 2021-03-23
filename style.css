@@ -1,4 +1,4 @@
-/* flex containers */
+/* flex grow */
 
 * {
     box-sizing: border-box;
@@ -29,12 +29,15 @@ body {
 
 .one {
     background-color: red;
+    flex-grow: 2;
 }
 
 .two {
     background-color: blue;
+    flex: 3;
 }
 
 .three {
     background-color: green;
+    flex-grow: 1;
 }
