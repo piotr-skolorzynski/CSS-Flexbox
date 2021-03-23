@@ -18,17 +18,17 @@ body {
 }
 
 .flex-container {
+    height: 800px;
     display: flex;
     background-color: #fff;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+    /* justify-content: center; */
+    justify-content: flex-end;
 }
 
 .box {
     height: 100px;
-    /* flex-basis: 500px; */
-    /* short-hand method */
-    flex: 1 0 200px; /*flex-grow, flex-shrink, flex-basis*/
-    /* flex: 1; means flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
+    flex: 0 0 100px; 
 }
 
 .one {
