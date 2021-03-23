@@ -1,4 +1,4 @@
-/* flex wrap */
+/* flex basis */
 
 * {
     box-sizing: border-box;
@@ -13,23 +13,22 @@ body {
 
 .wrapper {
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .flex-container {
     display: flex;
     background-color: #fff;
-    /* flex-wrap: wrap; */
-    /* flex-wrap: wrap; default */
-    /* flex-wrap: no-wrap; */
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .box {
     height: 100px;
-    min-width: 200px;
-    flex-grow: 1;
+    /* flex-basis: 500px; */
+    /* short-hand method */
+    flex: 1 0 200px; /*flex-grow, flex-shrink, flex-basis*/
+    /* flex: 1; means flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
 }
 
 .one {
