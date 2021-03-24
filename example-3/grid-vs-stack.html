@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c277eafce0.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>CSS Flexbox - example #3</title>
 </head>
 <body>
@@ -16,10 +19,16 @@
                 <li><a href="">Contact</a></li>
             </ul>
             <ul class="social">
-                <li><a href="" class="fb">Facebook</a></li>
-                <li><a href="" class="tw">Twitter</a></li>
+                <li><a href="" class="fb"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="" class="tw"><i class="fab fa-twitter-square"></i></a></li>
             </ul>
         </nav>
+    </div>
+
+    <div style="margin: 28px;">
+        <span>Layout:</span>
+        <a href="#" class="stack">stack</a>
+        <a href="#" class="grid">grid</a>
     </div>
 
     <section id="blocks">
@@ -30,9 +39,55 @@
         <article>
             <h2>Get to the chopper...</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quo eos placeat facilis eum est omnis vitae? Adipisci, id officia!</p>
-
         </article>
-    </section>
-    
+        <article>
+            <h2>What's horse doing on a spaceship... ?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ratione quibusdam odio quis delectus voluptate quia, inventore quae dicta atque.</p>
+        </article>
+                <article>
+            <h2>I pity the fool...</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis hic eius odit at ullam assumenda deserunt sequi, deleniti minima.</p>
+        </article>
+        <article>
+            <h2>Get to the chopper...</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quo eos placeat facilis eum est omnis vitae? Adipisci, id officia!</p>
+        </article>
+        <article>
+            <h2>What's horse doing on a spaceship... ?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ratione quibusdam odio quis delectus voluptate quia, inventore quae dicta atque.</p>
+        </article>
+    </section>    
+
+    <script>
+
+        // my version in vanilla js
+        const stack = document.querySelector('.stack');
+        const grid = document.querySelector('.grid');
+        const articles = document.querySelectorAll('article');
+        // console.log(articles);
+        function addStackClass () {
+            articles.forEach(article => {
+                article.setAttribute('class', 'stack');
+            })
+        };
+        function remStackClass () {
+            articles.forEach(article => {
+                article.removeAttribute('class');
+            })
+        };
+        stack.addEventListener('click', addStackClass);
+        grid.addEventListener('click', remStackClass);
+
+        // jquery version
+        // $("a.stack").on("click", function(){
+        //    $("article").addClass("stack"); 
+        // });
+        // $("a.grid").on("click", function(){
+        //    $("article").removeClass("stack"); 
+        // });
+    </script>
+
+
+
 </body>
 </html>
