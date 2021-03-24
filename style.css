@@ -22,12 +22,13 @@ body {
     display: flex;
     background-color: #fff;
     flex-flow: column wrap;
-    /* justify-content: center; */
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: flex-end; */
 }
 
 .box {
-    height: 100px;
+    width: 100px;
     flex: 0 0 100px; 
 }
 
